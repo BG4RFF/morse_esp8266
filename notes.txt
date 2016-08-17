@@ -1,0 +1,15 @@
+SENSOR_DEVICE
+
+user_main.c
+	This is the initialization file for the user application.
+	user_init() is the function that will be called by the framework to execute the user defined application.
+
+user_config.h
+	This starts with defining parameters for the demo.  Some of these need to be cleared out.
+
+user_webserver.c
+	This file contains the parsing instructions for paramters passed via HTTP requests.
+	This file needs to be cleaned up to remove parameters for demo examples that I will not be using.
+
+
+CURL -X POST -H "Content-Type:application/json" -d '{"Request":{"Station":{"Connect_Station":{"ssid":"GoLions", "password":"", "token":"1234567890123456789012345678901234567890"}}}}' http://192.168.4.1/config?command=wifi
